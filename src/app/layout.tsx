@@ -28,7 +28,51 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#FF2D7C" />
         <meta name="description" content="Niloy Saha - Software Developer & Data Analyst. Portfolio showcasing projects in full-stack development, AI, and machine learning." />
+        <meta name="author" content="Niloy Saha" />
+        <meta name="keywords" content="Niloy Saha, Software Developer, Data Analyst, Full Stack Developer, AI, Machine Learning, Dickinson College" />
         <title>Niloy Saha | Software Developer</title>
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://niloy-saha-123.github.io/" />
+        <meta property="og:title" content="Niloy Saha | Software Developer & Data Analyst" />
+        <meta property="og:description" content="Computer Science & Data Analytics student at Dickinson College, specializing in full-stack development, AI/ML, and building production-grade solutions." />
+        <meta property="og:image" content="https://niloy-saha-123.github.io/android-chrome-512x512.png" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@__niloy__06" />
+        <meta name="twitter:creator" content="@__niloy__06" />
+        <meta name="twitter:title" content="Niloy Saha | Software Developer & Data Analyst" />
+        <meta name="twitter:description" content="Computer Science & Data Analytics student at Dickinson College, specializing in full-stack development, AI/ML, and building production-grade solutions." />
+        <meta name="twitter:image" content="https://niloy-saha-123.github.io/android-chrome-512x512.png" />
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Niloy Saha",
+              "url": "https://niloy-saha-123.github.io/",
+              "jobTitle": "Software Developer & Data Analyst",
+              "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Dickinson College"
+              },
+              "description": "Computer Science & Data Analytics student at Dickinson College, specializing in full-stack development, AI/ML, and building production-grade solutions.",
+              "email": "sahan@dickinson.edu",
+              "sameAs": [
+                "https://github.com/niloy-saha-123",
+                "https://www.linkedin.com/in/niloysaha24/",
+                "https://www.facebook.com/niloy.24.2004/",
+                "https://www.instagram.com/__niloy__06/",
+                "https://x.com/__niloy__06"
+              ]
+            })
+          }}
+        />
 
         {/* Google Fonts - Comic Theme */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
