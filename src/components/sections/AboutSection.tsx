@@ -7,9 +7,9 @@ const AboutSection: React.FC = () => {
   const { theme } = useTheme();
 
   const details = [
-    { icon: '💼', text: 'Experience: Software Development, Data Analysis' },
-    { icon: '📍', text: 'Location: Carlisle, PA' },
-    { icon: '📧', text: 'Email: sahan@dickinson.edu' },
+    { icon: '💼', text: 'Experience: Software Development, Data Analysis', isLink: false },
+    { icon: '📍', text: 'Location: Carlisle, PA', isLink: false },
+    { icon: '📧', text: 'Email: sahan@dickinson.edu', isLink: true, href: 'mailto:sahan@dickinson.edu' },
   ];
 
   return (
@@ -61,20 +61,38 @@ const AboutSection: React.FC = () => {
 
           {/* Detail Items */}
           <div className="flex flex-col gap-4">
-            {details.map((detail, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-4 px-6 py-4 rounded-lg font-bold text-white"
-                style={{
-                  background: 'linear-gradient(135deg, #FF2D7C 0%, #9B5DE5 100%)',
-                  transform: 'skewX(-5deg)'
-                }}
-              >
+            {details.map((detail, index) => {
+              const content = (
                 <span style={{ transform: 'skewX(5deg)' }}>
                   {detail.icon} {detail.text}
                 </span>
-              </div>
-            ))}
+              );
+
+              return detail.isLink ? (
+                <a
+                  key={index}
+                  href={detail.href}
+                  className="flex items-center gap-4 px-6 py-4 rounded-lg font-bold text-white transition-all duration-200 hover:scale-105 cursor-pointer"
+                  style={{
+                    background: 'linear-gradient(135deg, #FF2D7C 0%, #9B5DE5 100%)',
+                    transform: 'skewX(-5deg)'
+                  }}
+                >
+                  {content}
+                </a>
+              ) : (
+                <div
+                  key={index}
+                  className="flex items-center gap-4 px-6 py-4 rounded-lg font-bold text-white"
+                  style={{
+                    background: 'linear-gradient(135deg, #FF2D7C 0%, #9B5DE5 100%)',
+                    transform: 'skewX(-5deg)'
+                  }}
+                >
+                  {content}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

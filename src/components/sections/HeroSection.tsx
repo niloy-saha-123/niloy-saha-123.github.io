@@ -118,7 +118,7 @@ const HeroSection: React.FC = () => {
             className="font-comic text-xl max-w-[520px] mt-6 leading-relaxed"
             style={{ color: theme === 'dark' ? '#FFF8E7' : '#0D0D0D' }}
           >
-            Computer Science & Data Analytics student at Dickinson College,
+            <span className="font-bold">Computer Science & Data Analytics</span> student at <span className="font-bold">Dickinson College</span>,
             specializing in full-stack and backend development, systems infrastructure,
             AI/ML, and building production-grade solutions.
           </p>

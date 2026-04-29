@@ -46,7 +46,7 @@ def create_favicon(size):
     return img
 
 def main():
-    out_dir = "/Users/niloysaha/IdeaProjects/portfolio2/public"
+    out_dir = "/Users/niloysaha/IdeaProjects/niloy-saha-123.github.io/public"
 
     for filename, size in SIZES.items():
         img = create_favicon(size)
